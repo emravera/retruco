@@ -4,7 +4,7 @@ Retruco App
 This is a simple Argentinian App developed using Intel XDK. Also is given as 
 open source for the community of "Jugadores de Truco".
 
-With whi software you can:
+With this software you can:
 
 1) Create Truco Teams from your device contacts
 
@@ -14,8 +14,13 @@ With whi software you can:
 
 4) Keep the historical data of all the matches you play in your entire life!
 
-
 The license is protected with the BEERWARE license. (https://en.wikipedia.org/wiki/Beerware)
+
+
+Builds
+=====================================================================
+
+APK for Android devices can be found in the release section. 
 
 
 Screenshots
