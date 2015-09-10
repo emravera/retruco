@@ -1,0 +1,87 @@
+.puntaje-equipos 
+{
+    height: 100px;
+}
+.puntaje-puntos {
+    height: 310px;
+}
+.puntaje-botones {
+    height: 50px;                  
+}
+#left {
+    width: 50%;
+    position: relative;
+    float: left;
+}                
+#rigth {
+    width: 50%;
+    position: relative;
+    float: left;
+}
+
+.borde-right {
+    border-right: 3px solid black;
+}
+
+.borde-left {
+    border-left: 3px solid black;
+}
+
+.borde-top {
+    border-top:  3px solid black;
+}
+
+.center {
+    text-align: center;
+}
+
+.button-size-md {
+    width: 75px;
+}
+
+.button-size-sm {
+    width: 40px;
+    height: 30px;
+}
+
+.button-size-lg {
+    width: 100px;
+    height: 30px;
+}
+
+.center-obj {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;                   
+}
+
+/* Sprite Clases */
+img.five {
+    width: 50px;
+    height: 50px;
+    background: url(../images/sprite-small.png) 0 0;
+}     
+
+img.four {
+    width: 50px;
+    height: 50px;
+    background: url(../images/sprite-small.png) -53px 0;
+}  
+
+img.three {
+    width: 50px;
+    height: 50px;
+    background: url(../images/sprite-small.png) -105px 0;
+}  
+
+img.two {
+    width: 50px;
+    height: 50px;
+    background: url(../images/sprite-small.png) -168px 0;
+}  
+
+img.one {
+    width: 10px;
+    height: 50px;
+    background: url(../images/sprite-small.png) -220px 0;
+}

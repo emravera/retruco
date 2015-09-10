@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--HTML5 doctype-->
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="media_button_bar/css/media_button_bar.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="app_framework/2.1/css/af.ui.min.css">
+		<link rel="stylesheet" type="text/css" href="app_framework/2.1/css/icons.min.css">
+		<link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+		<title>Re-Truco App</title>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+		<style type="text/css">
+			/* Prevent copy paste for all elements except text fields */
+			*  { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); }
+			input, textarea  { -webkit-user-select:text; }
+            img {border: none; }
+		</style>
+		<script src="intelxdk.js"></script>
+
+		<script type="text/javascript">
+			/* Intel native bridge is available */
+			var onDeviceReady=function(){
+			 //hide splash screen
+			 intel.xdk.device.hideSplashScreen();
+			};
+			document.addEventListener("intel.xdk.device.ready",onDeviceReady,false);
+		</script>
+		<!--   
+   You may substitute jQuery for the App Framework selector library.
+   See http://app-framework-software.intel.com/documentation.php#afui/afui_jquery
+  -->
+		<script type="application/javascript" src="app_framework/2.1/appframework.js"></script>
+		<script type="application/javascript" src="app_framework/2.1/appframework.ui.js" data-ver="1"></script>
+		<script src="cordova.js"></script>
+		<script type="application/javascript" src="js/index_user_scripts.js"></script>
+		<script type="application/javascript" src="js/af_subpage.js"></script>
+	</head>
+
+	<body id="afui">
+
+		<!-- content goes here-->
+		<div class="uwrap" id="content">
+			<div class="upage panel" id="mainpage" data-header="af-header-0" data-footer="none">
+				<div class="upage-outer">
+					<header class="container-group inner-element uib_w_1" data-uib="app_framework/header" data-ver="1" id="af-header-0">
+						<h1>ReTruco</h1>
+						<div class="widget-container wrapping-col single-centered"></div>
+						<div class="widget-container content-area horiz-area wrapping-col left"></div>
+						<div class="widget-container content-area horiz-area wrapping-col right"></div>
+					</header>
+					<div class="upage-content" id="mainsub">
+
+						<div class="grid grid-pad urow uib_row_1 row-height-1" data-uib="layout/row" data-ver="0">
+							<div class="col uib_col_1 col-0_12-12" data-uib="layout/col" data-ver="0">
+								<div class="widget-container content-area vertical-col">
+
+									<div class="widget uib_w_2 scale-image d-margins" data-uib="media/img" data-ver="0">
+										<figure class="figure-align">
+											<img src="images/truco.JPG" id="img1">
+
+											<figcaption data-position="bottom"></figcaption>
+										</figure>
+									</div>
+									<a class="button widget uib_w_3 d-margins" data-uib="app_framework/button" data-ver="1">Nuevo</a>
+									<a class="button widget uib_w_4 d-margins" data-uib="app_framework/button" data-ver="1">Historico</a>
+									<span class="uib_shim"></span>
+								</div>
+							</div>
+							<span class="uib_shim"></span>
+						</div>
+					</div>
+					<!-- /upage-content -->
+
+				</div>
+				<!-- /upage-outer -->
+
+			</div>
+
+			<div class="upage panel" id="uib_page_2" data-header="af-header-2" data-footer="none">
+				<div class="upage-outer">
+					<header class="container-group inner-element uib_w_10" data-uib="app_framework/header" data-ver="1" id="af-header-2">
+						<h1>Puntaje</h1>
+						<div class="widget-container wrapping-col single-centered"></div>
+						<div class="widget-container content-area horiz-area wrapping-col left with-back"><a id="btn-back-tablero" class="button backButton">Atras</a>
+						</div>
+						<div class="widget-container content-area horiz-area wrapping-col right"></div>
+					</header>
+					<div id="uib_page_2sub" class="upage-content ">
+						<section id="left" class="borde-right">
+							<section class="puntaje-equipos">
+								<a id="btn-nos" class="button button-size-lg" style="display:block;margin-left:auto;margin-right:auto;" data-uib="app_framework/button" data-ver="1">Nosotros</a>
+								<div id="name-nos">
+								</div>
+							</section>
+							<section id="tablero-nos" class="puntaje-puntos borde-top">
+								<!-- This will be fullfiled with matches! -->
+
+							</section>
+							<section class="puntaje-botones borde-top">
+								<a id="sumar-nos" class="button widget d-margins button-size-md" data-uib="app_framework/button" data-ver="1">+</a>
+								<a id="restar-nos" class="button widget d-margins button-size-md" data-uib="app_framework/button" data-ver="1">-</a> 
+							</section>
+						</section>
+						<section id="rigth">
+							<section class="puntaje-equipos">
+								<a id="btn-ellos" class="button button-size-lg" style="display:block;margin-left:auto;margin-right:auto;" data-uib="app_framework/button" data-ver="1">Ellos</a>
+								<div id="name-ellos">
+								</div>
+							</section>
+							<section id="tablero-ellos" class="puntaje-puntos borde-top">
+								<!-- This will be fullfiled with matches! -->
+
+							</section>
+							<section class="puntaje-botones borde-top">
+								<a id="sumar-ellos" class="button widget d-margins button-size-md" data-uib="app_framework/button" data-ver="1">+</a>
+								<a id="restar-ellos" class="button widget d-margins button-size-md" data-uib="app_framework/button" data-ver="1">-</a> 
+							</section>
+						</section>
+					</div>
+				</div>
+				<!-- /upage-outer -->
+			</div>
+			<div class="upage panel" id="uib_page_1" data-header="af-header-1" data-footer="none">
+				<div class="upage-outer">
+					<header class="container-group inner-element uib_w_5" data-uib="app_framework/header" data-ver="1" id="af-header-1">
+						<h1>Historico</h1>
+						<div class="widget-container wrapping-col single-centered"></div>
+						<div class="widget-container content-area horiz-area wrapping-col left with-back"><a class="button backButton">Atras</a>
+						</div>
+						<div class="widget-container content-area horiz-area wrapping-col right"></div>
+					</header>
+					<div id="uib_page_1sub" class="upage-content ">
+
+						<div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0">
+							<div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+								<div class="widget-container content-area vertical-col">
+
+									<ul id="partidas-list" class="list widget uib_w_6 d-margins" data-uib="app_framework/listview" data-ver="1">
+
+										<li class="widget uib_w_7" data-uib="app_framework/listitem" data-ver="1"><a>Historico 1</a>
+										</li>
+										<li class="divider"></li>
+
+									</ul><span class="uib_shim"></span>
+								</div>
+							</div>
+							<span class="uib_shim"></span>
+						</div>
+					</div>
+				</div>
+				<!-- /upage-outer -->
+			</div>
+			<div class="upage panel" id="uib_page_3" data-header="af-header-3" data-footer="af-footer-0">
+				<div class="upage-outer">
+					<header class="container-group inner-element uib_w_11" data-uib="app_framework/header" data-ver="1" id="af-header-3">
+						<h1>Contactos</h1>
+						<div class="widget-container wrapping-col single-centered"></div>
+						<div class="widget-container content-area horiz-area wrapping-col left with-back"><a class="button backButton">Atras</a>
+						</div>
+						<div class="widget-container content-area horiz-area wrapping-col right"></div>
+					</header>
+					<div id="uib_page_3sub" class="upage-content ">
+
+						<div class="grid grid-pad urow uib_row_3 row-height-3" data-uib="layout/row" data-ver="0">
+							<div class="col uib_col_3 col-0_12-12" data-uib="layout/col" data-ver="0">
+								<div class="widget-container content-area vertical-col">
+                                    <ul id="contact-list" class="list widget uib_w_6 d-margins" data-uib="app_framework/listview" data-ver="1">
+
+										<li class="widget" data-uib="app_framework/listitem" data-ver="1"><a>Contacto 1</a>
+										</li>
+										<li class="divider"></li>
+
+									</ul>
+									<span class="uib_shim"></span>
+								</div>
+							</div>
+							<span class="uib_shim"></span>
+						</div>
+					</div>
+					<footer class="inner-element uib_w_12" data-uib="app_framework/footer" data-ver="1" id="af-footer-0"></footer>
+				</div>
+				<!-- /upage-outer -->
+			</div>
+			<!-- /upage -->
+
+		</div>
+		<!-- /uwrap -->
+	</body>
+
+</html>
