@@ -21,4 +21,4 @@ The license is protected with the BEERWARE license. (https://en.wikipedia.org/wi
 Screenshots
 =====================================================================
 
-![Alt text](/retruco-screenshots.JPG?raw=true "RetrucoApp")
+![Alt text](/assets/retruco-screenshots.JPG?raw=true "RetrucoApp")
